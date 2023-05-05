@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@font-face {
+    font-family: 'english-island';
+    src: url('./fonts/english-island.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    align-items: center;
+    background-color: white;
+    border-radius: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    height: 128px;
+    width: 100%;
+}
+
+.space-top {
+    height: 180px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #D6C2FF;
+    margin-top: 32px;
+}
+
+.space-24-row {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.right-side-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 0%;
+}
+
+.border-radius-40 {
+    border-radius: 40px;
+}
+
+.border-radius-80 {
+    border-radius: 60px;
+}
+
+.bg-pink {
+    background-color: #D6C2FF;
+    width: 100%;
+    min-height: 100%;
+}
+
+.english-island-48 {
+    font-family: 'english-island';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 53px;
+}
+
+.english-island-31 {
+    font-family: 'english-island';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 31px;
+    line-height: 34px;
+}
+
+
+.montserrat-39-bold {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 48px;
+}
+
+.montserrat-25 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 38px;
+}
+
+.montserrat-20-bold {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.montserrat-20-semibold {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 32px;
+}
+
+.english-island-25-semibold {
+    font-family: 'english-island';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 27px;
+}
+
+.montserrat-16-static {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.montserrat-16 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-link-style {
+    text-decoration: none;
+}
+
+.navbar-link-style:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+    text-decoration-color: #35006A;
+    text-decoration-thickness: 3px;
+    color: #35006A;
+}
+
+
+
+.button-container {
+    display: inline-block;
+    padding: 16px;
+    color: #fff;
+    background-color: #35006A;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+}
+
+.button-container:hover {
+    transform: scale(1.2);
+    text-decoration: none;
+}
+
+.color-purple {
+    color: #35006A;
+}
+
+.button-whats {
+    background-color: #25D366;
+    border: none;
+    color: white;
+    border-radius: 56px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.button-whats:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.button-whats p {
+    padding-right: 16px;
+    margin: 0;
+}
+
+.container-icon {
+    height: 48px;
+    width: 48px;
+    background-color: #35006A;
+    border-radius: 24px;
+    margin-right: 12px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #DECDE7;
+}
+
+button.navbar-toggler {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.center-social-media-row-mobile {
+    justify-content: end;
+}
+
+.center-text-mobile {
+    text-align: start;
+}
+
+.nav-photo {
+    width: 72px;
+    height: 72px;
+}
+
+@media (max-width: 767.98px) {
+    .nav-photo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .center-text-mobile {
+        text-align: center;
+    }
+
+    .center-social-media-row-mobile {
+        justify-content: center;
+    }
+
+    .english-island-48 {
+        font-family: 'english-island';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 53px;
+    }
+
+    .english-island-31 {
+        font-family: 'english-island';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 34px;
+        margin-top: 5px;
+    }
+
+
+    .montserrat-39-bold {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 31px;
+        line-height: 48px;
+    }
+
+    .montserrat-25 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 38px;
+    }
+
+    .montserrat-20-bold {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    .montserrat-20-semibold {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 16px;
+        padding-left: 32px;
+    }
+
+    .english-island-25-semibold {
+        font-family: 'english-island';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 27px;
+    }
+
+    .montserrat-16 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+    }
+}

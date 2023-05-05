@@ -1,0 +1,190 @@
+<html>
+
+<head>
+
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- Pacote JavaScript do Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#enviar-mensagem').click(function () {
+                enviarEmail();
+            });
+
+            $(".navbar-toggler").click(function () {
+                if ($('#nav-icon').hasClass('fa fa-bars')) {
+                    $('#nav-icon').removeClass('fa fa-bars').addClass('fa fa-chevron-up');
+                } else {
+                    $('#nav-icon').removeClass('fa fa-chevron-up').addClass('fa fa-bars');
+                }
+            });
+        });
+
+        const form = document.getElementById("contact-form");
+
+
+        function enviarEmail() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+
+            const data = {
+                personalizations: [
+                    {
+                        to: [{ email: "saitoeduardo2001@gmail.com" }],
+                        subject: subject
+                    }
+                ],
+                from: { email: email, name: name },
+                content: [{ type: "text/plain", value: message }]
+            };
+
+            fetch("https://api.mailersend.com/v1/email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer mlsn.ca3d693b0862a451cb25e3382c83ab7d2b75af272094ec53a1ca0f5061618391"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert("E-mail enviado com sucesso!");
+                        form.reset();
+                    } else {
+                        alert("Houve um erro ao enviar o e-mail. Por favor, tente novamente mais tarde.");
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+
+
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body class="bg-pink">
+    <div class="container">
+        <!-- Navbar -->
+        <div class="container fixed-top">
+            <nav
+                class="navbar navbar-expand-lg navbar-light bg-light border-radius-80 mt-5 justify-content-between p-4">
+                <div class="row align-items-center justify-content-center">
+                    <img src="./assets/nav-foto.png" class="mx-3 nav-photo" />
+                    <a class="navbar-brand english-island-31" href="index.html">Paola Slobodzian</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="nav-icon" class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="my-3">
+                            <a href="portfolio.html" class="montserrat-20-semibold color-purple navbar-link-style"
+                                href="#">Portfólio</a>
+                        </li>
+                        <li class="my-3">
+                            <a href="tools.html" class="montserrat-20-semibold color-purple navbar-link-style"
+                                href="#">Ferramentas</a>
+                        </li>
+                        <li class="my-3">
+                            <a href="contact.html" class="montserrat-20-semibold color-purple navbar-link-style"
+                                href="#">Contato</a>
+                        </li>
+                        <li class="my-3">
+                            <a href="about.html" class="montserrat-20-semibold color-purple navbar-link-style"
+                                href="#">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="space-top"></div>
+
+        <div class="mt-5 px-5 py-4 border-radius-40 bg-white p">
+            <p class="english-island-48 text-center mx-5">Precisa de um orçamento ou quer dar uma sugestão?</p>
+            <p class="montserrat-25 text-center">Entre em contato</p>
+            <form id="contact-form">
+                <textarea class="w-100 form-control text-left my-4" type="text" id="name" name="name"
+                    placeholder="Nome:" style="height: 40px; resize: none;"></textarea>
+                <textarea class="w-100 form-control text-left my-4" type="email" id="email" name="email"
+                    placeholder="E-mail:" style="height: 40px; resize: none;"></textarea>
+                <textarea class="w-100 form-control text-left my-4" type="text" id="subject" name="subject"
+                    placeholder="Assunto:" style="height: 40px; resize: none;"></textarea>
+                <textarea class="w-100 form-control text-left my-4" type="text" id="message" name="message"
+                    placeholder="Mensagem:" style="height: 160px; resize: none;"></textarea>
+                <div class="row justify-content-end">
+                    <a class="mt-3 mr-3" href="#" id="enviar-mensagem">
+                        <p class="montserrat-20-bold button-container">ENVIAR MENSAGEM</p>
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <div class="mt-5 px-5 py-4 border-radius-40 bg-white d-flex">
+            <div class="col justify-content-center">
+                <p class="english-island-48 text-center mx-5">Ou pelo WhatsApp:</p>
+                <div class="row align-items-center justify-content-center">
+                    <a target="_blank"
+                        href="https://wa.me/5542999117465?text=Ol%C3%A1%2C+gostaria+de+realizar+um+or%C3%A7amento%21"
+                        class="button-whats mr-3" style="width: 350px;">
+                        <p class="text-center">Entre em contato</p>
+                        <img src="./assets/whats.png" class="img-fluid" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="container-fluid bg-light mt-5 p-4">
+        <div class="container">
+            <div class="col align-items-center justify-content-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="english-island-25-semibold color-purple center-text-mobile">Entre em contato:</p>
+                        <p class="montserrat-16-static color-purple mb-3 center-text-mobile">
+                            paola.slobodzian@outlook.com</p>
+                    </div>
+                    <div class="col-md-6 align-items-center">
+                        <div id="social-media-row" class="row center-social-media-row-mobile">
+                            <a target="_blank" href="https://www.instagram.com/paolaslob/" class="container-icon">
+                                <img src="./assets/insta.png" />
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/paolaslob/" class="container-icon">
+                                <img src="./assets/linkedin.png" class="img-fluid" />
+                            </a>
+                            <a target="_blank" href="https://www.behance.net/paolaslobodzian" class="container-icon">
+                                <img src="./assets/behance.png" class="img-fluid" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="line"></div>
+                </div>
+                <div class="row align-items-center justify-content-center mt-3">
+                    <div class="montserrat-16-static color-purple">Paola Slobodzian © 2023</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

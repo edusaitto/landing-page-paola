@@ -1,0 +1,201 @@
+<html>
+
+<head>
+
+    <!-- CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <!-- Pacote JavaScript do Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".navbar-toggler").click(function () {
+                if ($('#nav-icon').hasClass('fa fa-bars')) {
+                    $('#nav-icon').removeClass('fa fa-bars').addClass('fa fa-chevron-up');
+                } else {
+                    $('#nav-icon').removeClass('fa fa-chevron-up').addClass('fa fa-bars');
+                }
+            });
+        });
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body class="bg-pink">
+    <div class="container">
+        <!-- Navbar -->
+        <div class="container fixed-top">
+            <nav
+                class="navbar navbar-expand-lg navbar-light bg-light border-radius-80 mt-5 justify-content-between p-4">
+                <div class="row align-items-center justify-content-center">
+                    <img src="./assets/nav-foto.png" class="mx-3 nav-photo" />
+                    <a class="navbar-brand english-island-31" href="index.html">Paola Slobodzian</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span id="nav-icon" class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="my-3">
+                            <a href="portfolio.html" class="montserrat-20-semibold color-purple navbar-link-style" href="#">Portfólio</a>
+                        </li>
+                        <li class="my-3">
+                            <a href="tools.html" class="montserrat-20-semibold color-purple navbar-link-style" href="#">Ferramentas</a>
+                        </li>
+                        <li class="my-3">
+                            <a href="contact.html" class="montserrat-20-semibold color-purple navbar-link-style" href="#">Contato</a>
+                        </li>
+                        <li class="my-3">
+                            <a href="about.html" class="montserrat-20-semibold color-purple navbar-link-style" href="#">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="space-top"></div>
+        <!-- Primeiro card -->
+        <div class="mt-5 px-5 border-radius-40 bg-white container">
+            <div class="row align-items-center py-5">
+                <div class="col-sm-6">
+                    <p class="english-island-48">Olá, sou a Paola!</p>
+                    <p class="montserrat-39-bold color-purple">UI/UX Designer</p>
+                    <p class="montserrat-25">Atualmente trabalhando como freelancer, meu foco é criar produtos que
+                        ofereçam uma experiência
+                        significativa e leve aos usuários...</p>
+                    <div class="row justify-content-end">
+                        <a href="#" class="mt-3 mr-3">
+                            <p class="montserrat-20-bold button-container">Ver mais</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <img src="./assets/foto-principal-card.png" class="img-fluid" />
+                </div>
+            </div>
+        </div>
+        <!-- Segundo card -->
+        <div class="mt-5 py-3 px-5 border-radius-40 bg-white p">
+            <div>
+                <div class="row align-items-center">
+                    <div class="col-sm-6 mt-4">
+                        <p class="english-island-48">Portfólio</p>
+                        <p class="montserrat-39-bold color-purple">Plataforma de administração de eventos - HubConnect
+                        </p>
+                        <p class="montserrat-25">Design de uma dashboard realizado com foco na praticidade de
+                            administração de eventos,
+                            credenciamento de pessoas e controle de acesso.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="./assets/hub.png" class="img-fluid" />
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="row align-items-center mt-5">
+                    <div class="col-sm-6">
+                        <img src="./assets/vgx.png" class="img-fluid" />
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="montserrat-39-bold color-purple">Sistema de contratação interna - VGX Contact Center
+                        </p>
+                        <p class="montserrat-25">Solução criada com o objetivo de facilitar a contratação de pessoas,
+                            redesenhando o Portal de
+                            acesso do candidato e criando um sistema de administração para ser acessado pelos
+                            recrutadores e examinadores..</p>
+                        <div class="row justify-content-end">
+                            <a href="#" class="mt-3 mr-3">
+                                <p class="montserrat-20-bold button-container">Ver todos</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Terceiro card -->
+        <div class="mt-5 px-5 py-4 border-radius-40 bg-white p">
+            <p class="english-island-48">Ferramentas favoritas</p>
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <img src="./assets/google-fonts.png" class="img-fluid" />
+                    <p>Biblioteca de ícones e fontes do Google</p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="./assets/unsplash.png" class="img-fluid" />
+                    <p>Biblioteca de fotografias e imagens em alta qualidade</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <img src="./assets/dribbble.png" class="img-fluid" />
+                    <p>Comunidade online para exposição de conteúdos, com diversas inspirações para designers</p>
+                </div>
+                <div class="col-sm-6">
+                    <img src="./assets/colormid.png" class="img-fluid" />
+                    <p>Gerador de paleta de cores</p>
+                </div>
+            </div>
+            <div class="row justify-content-end">
+                <a href="#" class="mt-3 mr-3">
+                    <p class="montserrat-20-bold button-container">Ver mais</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container fixed-bottom mb-4">
+        <div class="row justify-content-end">
+            <a target="_blank" href="https://wa.me/5542999117465?text=Ol%C3%A1%2C+gostaria+de+realizar+um+or%C3%A7amento%21" class="button-whats mr-3">
+                <p class="text-center">Entre em contato</p>
+                <img src="./assets/whats.png" class="img-fluid" />
+            </a>
+        </div>
+    </div>
+
+    <div id="footer" class="container-fluid bg-light mt-5 p-4">
+        <div class="container">
+            <div class="col align-items-center justify-content-center">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="english-island-25-semibold color-purple center-text-mobile">Entre em contato:</p>
+                        <p class="montserrat-16-static color-purple mb-3 center-text-mobile">paola.slobodzian@outlook.com</p>
+                    </div>
+                    <div class="col-md-6 align-items-center">
+                        <div id="social-media-row" class="row center-social-media-row-mobile">
+                            <a target="_blank" href="https://www.instagram.com/paolaslob/" class="container-icon">
+                                <img src="./assets/insta.png" />
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/in/paolaslob/" class="container-icon">
+                                <img src="./assets/linkedin.png" class="img-fluid" />
+                            </a>
+                            <a target="_blank" href="https://www.behance.net/paolaslobodzian" class="container-icon">
+                                <img src="./assets/behance.png" class="img-fluid" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="line"></div>
+                </div>
+                <div class="row align-items-center justify-content-center mt-3">
+                    <div class="montserrat-16-static color-purple">Paola Slobodzian © 2023</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
